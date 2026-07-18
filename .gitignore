@@ -1,0 +1,65 @@
+# ------------------------------------------------------------------
+# Nested app repositories — these are SEPARATE git repos, never
+# tracked here (this catalog is not a monorepo).
+# ------------------------------------------------------------------
+my-ussd-codes-apk/
+my-ussd-codes-ios/
+
+# --- macOS ---
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+
+# --- Windows ---
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# --- Linux ---
+*~
+.directory
+.Trash-*
+
+# --- Editors / IDEs ---
+.idea/
+*.iml
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# --- Node (validation tooling) ---
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# --- Logs / temp / env ---
+*.log
+*.tmp
+*.bak
+.env
+.env.*
+!.env.example
+.cache/
+dist/
+build/
