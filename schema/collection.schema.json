@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/albertolicea00/my-ussd-codes/main/schema/collection.schema.json",
+  "title": "USSD Code Collection",
+  "description": "A set of USSD codes importable by the My USSD Codes apps.",
+  "type": "object",
+  "required": ["id", "name", "version", "codes"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "id": {
+      "type": "string",
+      "description": "Unique collection identifier (kebab-case), matching the file name without extension.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Human-readable collection name.",
+      "minLength": 1
+    },
+    "description": {
+      "type": "string",
+      "description": "What this collection contains and who it is for."
+    },
+    "version": {
+      "type": "integer",
+      "description": "Bump on every content change so apps can detect updates.",
+      "minimum": 1
+    },
+    "country": {
+      "type": "string",
+      "description": "ISO 3166-1 alpha-2 country code when the collection is country-specific.",
+      "pattern": "^[A-Z]{2}$"
+    },
+    "carrier": {
+      "type": "string",
+      "description": "Carrier name when the collection is carrier-specific."
+    },
+    "language": {
+      "type": "string",
+      "description": "BCP 47 tag of the language used in names/descriptions.",
+      "pattern": "^[a-z]{2}(-[A-Z]{2})?$"
+    },
+    "codes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "ussd-code.schema.json" }
+    }
+  }
+}

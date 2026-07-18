@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://raw.githubusercontent.com/albertolicea00/my-ussd-codes/main/schema/ussd-code.schema.json",
+  "title": "USSD Code",
+  "description": "A single USSD/MMI code as consumed by the My USSD Codes apps.",
+  "type": "object",
+  "required": ["id", "name", "code", "category"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique, stable identifier (kebab-case). Must be unique across the whole catalog.",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "name": {
+      "type": "string",
+      "description": "Short human-readable name shown in the app.",
+      "minLength": 1,
+      "maxLength": 60
+    },
+    "description": {
+      "type": "string",
+      "description": "What the code does, in one or two sentences."
+    },
+    "code": {
+      "type": "string",
+      "description": "The dial string. May contain {placeholders} declared in `variables`.",
+      "pattern": "^([*#+0-9]|\\{[a-z][a-zA-Z0-9]*\\})+$"
+    },
+    "category": {
+      "type": "string",
+      "description": "Category used by the Sections tab (e.g. \"Balance\", \"Call forwarding\").",
+      "minLength": 1
+    },
+    "tags": {
+      "type": "array",
+      "description": "Free-form keywords to improve search.",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "variables": {
+      "type": "array",
+      "description": "Inputs the app asks for before dialing. Every {placeholder} in `code` must be declared here.",
+      "items": {
+        "type": "object",
+        "required": ["key", "label", "type"],
+        "additionalProperties": false,
+        "properties": {
+          "key": {
+            "type": "string",
+            "description": "Placeholder name as it appears inside braces in `code`.",
+            "pattern": "^[a-z][a-zA-Z0-9]*$"
+          },
+          "label": {
+            "type": "string",
+            "description": "Prompt shown to the user.",
+            "minLength": 1
+          },
+          "type": {
+            "type": "string",
+            "description": "Input type, controls the keyboard shown by the app.",
+            "enum": ["text", "number", "phone"]
+          },
+          "hint": {
+            "type": "string",
+            "description": "Optional example value or extra guidance."
+          }
+        }
+      }
+    },
+    "dangerous": {
+      "type": "boolean",
+      "description": "True for codes that can lock a SIM, erase settings or cost money. The apps warn before running them.",
+      "default": false
+    },
+    "source": {
+      "type": "string",
+      "description": "Where the code comes from (spec, carrier page, tested device)."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Caveats, risks or carrier-specific remarks."
+    }
+  }
+}
