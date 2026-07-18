@@ -6,7 +6,7 @@ Guidance for AI assistants (Claude Code) working in this repository.
 
 **Data catalog** of USSD codes that feeds the **My USSD Codes** mobile apps. It contains **no app code** — only JSON collections, JSON Schemas, a dependency-free validation script and CI.
 
-**This is NOT a monorepo.** The sibling folders `my-ussd-codes-apk/` (Android) and `my-ussd-codes-ios/` (iOS) are **separate git repositories** and are git-ignored here. Never stage, commit or modify them from this repository.
+**This is NOT a monorepo.** The sibling folders `MyUSSDCodes-apk/` (Android) and `MyUSSDCodes-ios/` (iOS) are **separate git repositories** and are git-ignored here. Never stage, commit or modify them from this repository.
 
 ## Layout
 
