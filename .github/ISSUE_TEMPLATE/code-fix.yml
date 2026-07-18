@@ -1,0 +1,31 @@
+name: Code fix
+description: Report a code that is wrong, deprecated or missing information.
+title: "[fix]: "
+labels: ["code-fix"]
+body:
+  - type: input
+    id: code-id
+    attributes:
+      label: Code id
+      description: The `id` field of the affected code (or the file + name).
+      placeholder: gsm-show-imei
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Wrong dial string, deprecated by the carrier, wrong description, missing danger flag, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Correct value / expected behavior
+  - type: input
+    id: evidence
+    attributes:
+      label: How did you verify it?
+      description: Device, carrier, plan and date — or a link to the carrier's documentation.
+    validations:
+      required: true

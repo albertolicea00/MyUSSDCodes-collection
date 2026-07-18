@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Android app issue
+    url: https://github.com/albertolicea00/my-ussd-codes-apk/issues
+    about: Bugs or feature requests for the Android app belong in its own repository.
+  - name: iOS app issue
+    url: https://github.com/albertolicea00/my-ussd-codes-ios/issues
+    about: Bugs or feature requests for the iOS app belong in its own repository.

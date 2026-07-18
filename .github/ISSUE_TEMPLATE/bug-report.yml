@@ -1,0 +1,28 @@
+name: Bug report (tooling)
+description: Report a problem with the validation script, schemas or CI of this repository.
+title: "[bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        App bugs belong in the app repositories:
+        [Android](https://github.com/albertolicea00/my-ussd-codes-apk/issues) · [iOS](https://github.com/albertolicea00/my-ussd-codes-ios/issues)
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Include the exact command and full output.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: macOS 15, Node 20.11
