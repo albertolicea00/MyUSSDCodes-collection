@@ -1,6 +1,6 @@
-# Contributing to My USSD Codes — Code Catalog
+# Contributing to My USSD Codes [Code Catalog]
 
-Thanks for helping grow the catalog! This repository only contains **data** (JSON collections of USSD codes). Contributions to the apps belong in their own repositories: [Android](https://github.com/albertolicea00/my-ussd-codes-apk) · [iOS](https://github.com/albertolicea00/my-ussd-codes-ios).
+Thanks for helping grow the catalog! This repository only contains **data** (JSON collections of USSD codes). Contributions to the apps belong in their own repositories: [Android](https://github.com/albertolicea00/MyUSSDCodes-apk) · [iOS](https://github.com/albertolicea00/MyUSSDCodes-ios).
 
 ## Ways to contribute
 
@@ -66,7 +66,7 @@ chore: tighten validation script
 
 - Wrong or deprecated code → open a **Code fix** issue.
 - Tooling/schema problem → open a **Bug report** issue.
-- App bugs → use the [Android](https://github.com/albertolicea00/my-ussd-codes-apk/issues) or [iOS](https://github.com/albertolicea00/my-ussd-codes-ios/issues) trackers.
+- App bugs → use the [Android](https://github.com/albertolicea00/MyUSSDCodes-apk/issues) or [iOS](https://github.com/albertolicea00/MyUSSDCodes-ios/issues) trackers.
 
 ## Code of Conduct
 
