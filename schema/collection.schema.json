@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://raw.githubusercontent.com/albertolicea00/my-ussd-codes/main/schema/collection.schema.json",
+  "$id": "https://raw.githubusercontent.com/albertolicea00/MyUSSDCodes-collection/main/schema/collection.schema.json",
   "title": "USSD Code Collection",
   "description": "A set of USSD codes importable by the My USSD Codes apps.",
   "type": "object",

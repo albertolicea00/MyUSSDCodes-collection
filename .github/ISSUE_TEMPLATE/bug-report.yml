@@ -7,7 +7,7 @@ body:
     attributes:
       value: |
         App bugs belong in the app repositories:
-        [Android](https://github.com/albertolicea00/my-ussd-codes-apk/issues) · [iOS](https://github.com/albertolicea00/my-ussd-codes-ios/issues)
+        [Android](https://github.com/albertolicea00/MyUSSDCodes-apk/issues) · [iOS](https://github.com/albertolicea00/MyUSSDCodes-ios/issues)
   - type: textarea
     id: what-happened
     attributes:

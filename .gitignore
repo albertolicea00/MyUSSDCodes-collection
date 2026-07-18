@@ -4,6 +4,8 @@
 # ------------------------------------------------------------------
 my-ussd-codes-apk/
 my-ussd-codes-ios/
+MyUSSDCodes-apk/
+MyUSSDCodes-ios/
 
 # --- macOS ---
 .DS_Store

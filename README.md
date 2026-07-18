@@ -1,6 +1,6 @@
 # My USSD Codes  [Code Catalog]
 
-[![Validate collections](https://github.com/albertolicea00/my-ussd-codes/actions/workflows/validate.yml/badge.svg)](https://github.com/albertolicea00/my-ussd-codes/actions/workflows/validate.yml)
+[![Validate collections](https://github.com/albertolicea00/MyUSSDCodes-collection/actions/workflows/validate.yml/badge.svg)](https://github.com/albertolicea00/MyUSSDCodes-collection/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/Node-18%2B-339933?logo=node.js)](https://nodejs.org)
 
@@ -10,8 +10,8 @@ Community-maintained catalog of USSD codes that feeds the **My USSD Codes** mobi
 >
 > | Platform | Repository |
 > | -------- | ---------- |
-> | 📱 Android  | [my-ussd-codes-apk](https://github.com/albertolicea00/my-ussd-codes-apk) |
-> | 📱 iOS      | [my-ussd-codes-ios](https://github.com/albertolicea00/my-ussd-codes-ios) |
+> | 📱 Android  | [MyUSSDCodes-apk](https://github.com/albertolicea00/MyUSSDCodes-apk) |
+> | 📱 iOS      | [MyUSSDCodes-ios](https://github.com/albertolicea00/MyUSSDCodes-ios) |
 
 ## 📱 About the apps
 
@@ -97,7 +97,7 @@ CI runs the same script on every push and pull request.
 The apps read raw files straight from this repository, e.g.:
 
 ```
-https://raw.githubusercontent.com/albertolicea00/my-ussd-codes/main/codes/gsm-standard.json
+https://raw.githubusercontent.com/albertolicea00/MyUSSDCodes-collection/main/codes/gsm-standard.json
 ```
 
 Paste a collection URL in **Settings → Import** inside the app.
