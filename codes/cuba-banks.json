@@ -1,0 +1,1358 @@
+{
+  "$schema": "../schema/collection.schema.json",
+  "id": "cuba-banks",
+  "name": "Cuba — Banks (BPA · BANDEC · BM)",
+  "description": "Cuban home-banking USSD operations for BPA, BANDEC and Banco Metropolitano. One entry per bank+operation (the same dial string can mean different things across banks). Source of truth for the Banca Remota app.",
+  "version": 1,
+  "country": "CU",
+  "language": "es",
+  "codes": [
+    {
+      "id": "banca-bpa-op-0",
+      "name": "Autenticarse",
+      "description": "Acceder al sistema",
+      "code": "*444*40*01#",
+      "category": "BPA · SESIÓN",
+      "tags": [
+        "bpa",
+        "login"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-1",
+      "name": "Cerrar sesión",
+      "description": "Cerrar sesión iniciada",
+      "code": "*444*70#",
+      "category": "BPA · SESIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-2",
+      "name": "Consultar saldo",
+      "description": "Consultar el saldo de la tarjeta",
+      "code": "*444*46#",
+      "category": "BPA · CONSULTAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-3",
+      "name": "Consultar servicios",
+      "description": "Consultar factura del servicio",
+      "code": "*444*47#",
+      "category": "BPA · CONSULTAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-5",
+      "name": "Últimas operaciones",
+      "description": "Últimas 10 operaciones",
+      "code": "*444*48#",
+      "category": "BPA · CONSULTAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-12",
+      "name": "Consulta Limite Tarjeta",
+      "description": "Consultar límites diarios",
+      "code": "*444*62#",
+      "category": "BPA · CONSULTAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-24",
+      "name": "Consulta todas las Cuentas",
+      "description": "Consultar todas de una vez",
+      "code": "*444*58#",
+      "category": "BPA · CONSULTAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-28",
+      "name": "Consultar Giro postal",
+      "description": "Consultar giro postal",
+      "code": "*444*65#",
+      "category": "BPA · CONSULTAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-29",
+      "name": "Consultar Créditos",
+      "description": "Consultar créditos bancarios",
+      "code": "*444*72#",
+      "category": "BPA · CONSULTAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-38",
+      "name": "Tipo de cambio",
+      "description": "Ver tipo de cambio actual",
+      "code": "*444*85#",
+      "category": "BPA · CONSULTAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-4",
+      "name": "Transferencia",
+      "description": "Transferir hacia otra tarjeta",
+      "code": "*444*45#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-6",
+      "name": "Electricidad",
+      "description": "Pagar factura de electricidad",
+      "code": "*444*41#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-7",
+      "name": "Teléfono",
+      "description": "Pagar factura telefónica",
+      "code": "*444*42#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-8",
+      "name": "ONAT",
+      "description": "Pagar ONAT",
+      "code": "*444*43#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-9",
+      "name": "Agua",
+      "description": "Pagar Aguas de la Habana",
+      "code": "*444*51#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-10",
+      "name": "Pagar Multa",
+      "description": "Pagar multa impuesta",
+      "code": "*444*44#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-21",
+      "name": "Recargar Nauta",
+      "description": "Recargue su cuenta Nauta",
+      "code": "*444*59#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-22",
+      "name": "Giro Postal",
+      "description": "Enviar/Consultar giros",
+      "code": "*444*64#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-23",
+      "name": "Pagar Gas",
+      "description": "Pagar la factura del gas",
+      "code": "*444*67#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-26",
+      "name": "Recargar móvil",
+      "description": "Recarga saldo celular",
+      "code": "*444*54#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-33",
+      "name": "Recargar Joven Club",
+      "description": "Transferir a Joven Club",
+      "code": "*444*93#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-37",
+      "name": "Pago Nauta Hogar",
+      "description": "Pagar servicio Nauta Hogar",
+      "code": "*444*84#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-39",
+      "name": "Recarga propia",
+      "description": "Recargar tarjeta propia",
+      "code": "*444*77#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-40",
+      "name": "Pago deuda Nauta Hogar",
+      "description": "Pagar deuda Nauta Hogar",
+      "code": "*444*86#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-48",
+      "name": "Depósito a plazo fijo",
+      "description": "Apertura depósito",
+      "code": "*444*81#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-49",
+      "name": "Cerrar plazo fijo",
+      "description": "Cierre de depósito",
+      "code": "*444*82#",
+      "category": "BPA · PAGOS Y RECARGAS",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-11",
+      "name": "Cambio Limite Tarjeta",
+      "description": "Incrementar límite diario",
+      "code": "*444*61#",
+      "category": "BPA · CONFIGURACIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-13",
+      "name": "Registrarse",
+      "description": "Registrarse en el sistema",
+      "code": "*444*49#",
+      "category": "BPA · CONFIGURACIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-14",
+      "name": "Eliminar registro",
+      "description": "Eliminar registro asociado",
+      "code": "*444*68#",
+      "category": "BPA · CONFIGURACIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-15",
+      "name": "Servicios Contratados",
+      "description": "Lista de servicios",
+      "code": "*444*52#",
+      "category": "BPA · CONFIGURACIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-19",
+      "name": "Ayuda",
+      "description": "Listado de operaciones",
+      "code": "*444*71#",
+      "category": "BPA · CONFIGURACIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-20",
+      "name": "Amortizar créditos",
+      "description": "Amortizar créditos bancarios",
+      "code": "*444*55#",
+      "category": "BPA · CONFIGURACIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-27",
+      "name": "Generar código PIN",
+      "description": "PIN no impreso",
+      "code": "*444*79#",
+      "category": "BPA · CONFIGURACIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-31",
+      "name": "Reimpresión tarjeta",
+      "description": "Extravío o daño",
+      "code": "*444*74#",
+      "category": "BPA · CONFIGURACIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-36",
+      "name": "Pérdida de PIN",
+      "description": "Pérdida PIN tarjeta",
+      "code": "*444*83#",
+      "category": "BPA · CONFIGURACIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-43",
+      "name": "Cambiar clave",
+      "description": "Cambiar clave de acceso",
+      "code": "*444*69#",
+      "category": "BPA · CONFIGURACIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bpa-op-44",
+      "name": "Asociar cuentas",
+      "description": "Vincular otra cuenta",
+      "code": "*444*60#",
+      "category": "BPA · CONFIGURACIÓN",
+      "tags": [
+        "bpa"
+      ],
+      "dangerous": false,
+      "source": "Banco Popular de Ahorro"
+    },
+    {
+      "id": "banca-bandec-op-0",
+      "name": "Autenticarse",
+      "description": "Acceder al sistema",
+      "code": "*444*40*02#",
+      "category": "BANDEC · SESIÓN",
+      "tags": [
+        "bandec",
+        "login"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-1",
+      "name": "Cerrar sesión",
+      "description": "Cerrar sesión iniciada",
+      "code": "*444*70#",
+      "category": "BANDEC · SESIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-45",
+      "name": "Cambio de tarjeta",
+      "description": "Tarjeta RED a operar",
+      "code": "*444*60#",
+      "category": "BANDEC · SESIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-2",
+      "name": "Consultar saldo",
+      "description": "Consultar el saldo de la tarjeta",
+      "code": "*444*46#",
+      "category": "BANDEC · CONSULTAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-3",
+      "name": "Consultar servicios",
+      "description": "Consultar factura del servicio",
+      "code": "*444*47#",
+      "category": "BANDEC · CONSULTAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-5",
+      "name": "Últimas operaciones",
+      "description": "Últimas 10 operaciones",
+      "code": "*444*48#",
+      "category": "BANDEC · CONSULTAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-12",
+      "name": "Consulta Limite Tarjeta",
+      "description": "Consultar límites diarios",
+      "code": "*444*62#",
+      "category": "BANDEC · CONSULTAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-24",
+      "name": "Consulta todas las Cuentas",
+      "description": "Consultar todas de una vez",
+      "code": "*444*58#",
+      "category": "BANDEC · CONSULTAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-28",
+      "name": "Consultar Giro postal",
+      "description": "Consultar giro postal",
+      "code": "*444*65#",
+      "category": "BANDEC · CONSULTAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-38",
+      "name": "Tipo de cambio",
+      "description": "Ver tipo de cambio actual",
+      "code": "*444*85#",
+      "category": "BANDEC · CONSULTAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-41",
+      "name": "Consultar ONAT",
+      "description": "Consultar ONAT",
+      "code": "*444*56#",
+      "category": "BANDEC · CONSULTAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-4",
+      "name": "Transferencia",
+      "description": "Transferir hacia otra tarjeta",
+      "code": "*444*45#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-6",
+      "name": "Electricidad",
+      "description": "Pagar factura de electricidad",
+      "code": "*444*41#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-7",
+      "name": "Teléfono",
+      "description": "Pagar factura telefónica",
+      "code": "*444*42#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-8",
+      "name": "ONAT",
+      "description": "Pagar ONAT",
+      "code": "*444*43#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-9",
+      "name": "Agua",
+      "description": "Pagar Aguas de la Habana",
+      "code": "*444*51#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-10",
+      "name": "Pagar Multa",
+      "description": "Pagar multa impuesta",
+      "code": "*444*44#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-21",
+      "name": "Recargar Nauta",
+      "description": "Recargue su cuenta Nauta",
+      "code": "*444*59#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-22",
+      "name": "Giro Postal",
+      "description": "Enviar/Consultar giros",
+      "code": "*444*64#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-23",
+      "name": "Pagar Gas",
+      "description": "Pagar la factura del gas",
+      "code": "*444*67#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-26",
+      "name": "Recargar móvil",
+      "description": "Recarga saldo celular",
+      "code": "*444*54#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-33",
+      "name": "Recargar Joven Club",
+      "description": "Transferir a Joven Club",
+      "code": "*444*93#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-37",
+      "name": "Pago Nauta Hogar",
+      "description": "Pagar servicio Nauta Hogar",
+      "code": "*444*84#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-39",
+      "name": "Recarga propia",
+      "description": "Recargar tarjeta propia",
+      "code": "*444*77#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-40",
+      "name": "Pago deuda Nauta Hogar",
+      "description": "Pagar deuda Nauta Hogar",
+      "code": "*444*86#",
+      "category": "BANDEC · PAGOS Y RECARGAS",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-11",
+      "name": "Cambio Limite Tarjeta",
+      "description": "Incrementar límite diario",
+      "code": "*444*61#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-13",
+      "name": "Registrarse",
+      "description": "Registrarse en el sistema",
+      "code": "*444*49#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-14",
+      "name": "Eliminar registro",
+      "description": "Eliminar registro asociado",
+      "code": "*444*68#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-15",
+      "name": "Servicios Contratados",
+      "description": "Lista de servicios",
+      "code": "*444*52#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-16",
+      "name": "Últimos pagos",
+      "description": "Consultar últimos realizados",
+      "code": "*444*63#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-19",
+      "name": "Ayuda",
+      "description": "Listado de operaciones",
+      "code": "*444*71#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-20",
+      "name": "Amortizar créditos",
+      "description": "Amortizar créditos bancarios",
+      "code": "*444*55#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-27",
+      "name": "Generar código PIN",
+      "description": "PIN no impreso",
+      "code": "*444*79#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-31",
+      "name": "Reimpresión tarjeta",
+      "description": "Extravío o daño",
+      "code": "*444*74#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-32",
+      "name": "Información RED",
+      "description": "Consultar información RED",
+      "code": "*444*78#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-43",
+      "name": "Cambiar clave",
+      "description": "Cambiar clave de acceso",
+      "code": "*444*69#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-47",
+      "name": "Apertura USD",
+      "description": "Apertura cuenta USD",
+      "code": "*444*76#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bandec-op-50",
+      "name": "PIN Multibanca",
+      "description": "Cambio PIN multibanca",
+      "code": "*444*57#",
+      "category": "BANDEC · CONFIGURACIÓN",
+      "tags": [
+        "bandec"
+      ],
+      "dangerous": false,
+      "source": "Banco de Crédito y Comercio"
+    },
+    {
+      "id": "banca-bm-op-0",
+      "name": "Autenticarse",
+      "description": "Acceder al sistema",
+      "code": "*444*40*03#",
+      "category": "BM · SESIÓN",
+      "tags": [
+        "bm",
+        "login"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-1",
+      "name": "Cerrar sesión",
+      "description": "Cerrar sesión iniciada",
+      "code": "*444*70#",
+      "category": "BM · SESIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-2",
+      "name": "Consultar saldo",
+      "description": "Consultar el saldo de la tarjeta",
+      "code": "*444*46#",
+      "category": "BM · CONSULTAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-3",
+      "name": "Consultar servicios",
+      "description": "Consultar factura del servicio",
+      "code": "*444*47#",
+      "category": "BM · CONSULTAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-5",
+      "name": "Últimas operaciones",
+      "description": "Últimas 10 operaciones",
+      "code": "*444*48#",
+      "category": "BM · CONSULTAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-12",
+      "name": "Consulta Limite Tarjeta",
+      "description": "Consultar límites diarios",
+      "code": "*444*62#",
+      "category": "BM · CONSULTAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-24",
+      "name": "Consulta todas las Cuentas",
+      "description": "Consultar todas de una vez",
+      "code": "*444*58#",
+      "category": "BM · CONSULTAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-28",
+      "name": "Consultar Giro postal",
+      "description": "Consultar giro postal",
+      "code": "*444*65#",
+      "category": "BM · CONSULTAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-30",
+      "name": "Localizar Transferencia",
+      "description": "Localizar transferencia",
+      "code": "*444*73#",
+      "category": "BM · CONSULTAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-38",
+      "name": "Tipo de cambio",
+      "description": "Ver tipo de cambio actual",
+      "code": "*444*85#",
+      "category": "BM · CONSULTAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-41",
+      "name": "Consultar ONAT",
+      "description": "Consultar ONAT",
+      "code": "*444*56#",
+      "category": "BM · CONSULTAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-42",
+      "name": "Consultar ONAT anual",
+      "description": "Consultar ONAT anual",
+      "code": "*444*57#",
+      "category": "BM · CONSULTAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-4",
+      "name": "Transferencia",
+      "description": "Transferir hacia otra tarjeta",
+      "code": "*444*45#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-6",
+      "name": "Electricidad",
+      "description": "Pagar factura de electricidad",
+      "code": "*444*41#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-7",
+      "name": "Teléfono",
+      "description": "Pagar factura telefónica",
+      "code": "*444*42#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-8",
+      "name": "ONAT",
+      "description": "Pagar ONAT",
+      "code": "*444*43#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-9",
+      "name": "Agua",
+      "description": "Pagar Aguas de la Habana",
+      "code": "*444*51#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-10",
+      "name": "Pagar Multa",
+      "description": "Pagar multa impuesta",
+      "code": "*444*44#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-21",
+      "name": "Recargar Nauta",
+      "description": "Recargue su cuenta Nauta",
+      "code": "*444*59#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-22",
+      "name": "Giro Postal",
+      "description": "Enviar/Consultar giros",
+      "code": "*444*64#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-23",
+      "name": "Pagar Gas",
+      "description": "Pagar la factura del gas",
+      "code": "*444*67#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-26",
+      "name": "Recargar móvil",
+      "description": "Recarga saldo celular",
+      "code": "*444*54#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-33",
+      "name": "Recargar Joven Club",
+      "description": "Transferir a Joven Club",
+      "code": "*444*93#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-37",
+      "name": "Pago Nauta Hogar",
+      "description": "Pagar servicio Nauta Hogar",
+      "code": "*444*84#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-39",
+      "name": "Recarga propia",
+      "description": "Recargar tarjeta propia",
+      "code": "*444*77#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-40",
+      "name": "Pago deuda Nauta Hogar",
+      "description": "Pagar deuda Nauta Hogar",
+      "code": "*444*86#",
+      "category": "BM · PAGOS Y RECARGAS",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-11",
+      "name": "Cambio Limite Tarjeta",
+      "description": "Incrementar límite diario",
+      "code": "*444*61#",
+      "category": "BM · CONFIGURACIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-13",
+      "name": "Registrarse",
+      "description": "Registrarse en el sistema",
+      "code": "*444*49#",
+      "category": "BM · CONFIGURACIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-14",
+      "name": "Eliminar registro",
+      "description": "Eliminar registro asociado",
+      "code": "*444*68#",
+      "category": "BM · CONFIGURACIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-15",
+      "name": "Servicios Contratados",
+      "description": "Lista de servicios",
+      "code": "*444*52#",
+      "category": "BM · CONFIGURACIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-18",
+      "name": "Asociar cuenta",
+      "description": "Asociar a telebanca",
+      "code": "*444*60#",
+      "category": "BM · CONFIGURACIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-19",
+      "name": "Ayuda",
+      "description": "Listado de operaciones",
+      "code": "*444*71#",
+      "category": "BM · CONFIGURACIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-25",
+      "name": "Cambiar PIN",
+      "description": "Cambio PIN Telebanca",
+      "code": "*444*69#",
+      "category": "BM · CONFIGURACIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-27",
+      "name": "Generar código PIN",
+      "description": "PIN no impreso",
+      "code": "*444*79#",
+      "category": "BM · CONFIGURACIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-31",
+      "name": "Reimpresión tarjeta",
+      "description": "Extravío o daño",
+      "code": "*444*74#",
+      "category": "BM · CONFIGURACIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-46",
+      "name": "Actualizar cuenta",
+      "description": "Actualizar asociadas",
+      "code": "*444*53#",
+      "category": "BM · CONFIGURACIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    },
+    {
+      "id": "banca-bm-op-47",
+      "name": "Apertura USD",
+      "description": "Apertura cuenta USD",
+      "code": "*444*76#",
+      "category": "BM · CONFIGURACIÓN",
+      "tags": [
+        "bm"
+      ],
+      "dangerous": false,
+      "source": "Banco Metropolitano"
+    }
+  ]
+}
