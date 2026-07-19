@@ -1,6 +1,6 @@
 {
-  "version": 1,
-  "updated": "2026-07-18",
+  "version": 2,
+  "updated": "2026-07-19",
   "collections": [
     {
       "id": "gsm-standard",
@@ -8,6 +8,27 @@
       "description": "Carrier-independent MMI/USSD codes defined by the GSM standard.",
       "path": "codes/gsm-standard.json",
       "count": 26
+    },
+    {
+      "id": "cuba-cubacel",
+      "name": "Cuba — Cubacel (ETECSA)",
+      "description": "ETECSA / Cubacel USSD service codes. Source of truth for CubaCell Connect.",
+      "path": "codes/cuba-cubacel.json",
+      "count": 17
+    },
+    {
+      "id": "cuba-banks",
+      "name": "Cuba — Banks (BPA · BANDEC · BM)",
+      "description": "Cuban home-banking USSD operations. Source of truth for Banca Remota.",
+      "path": "codes/cuba-banks.json",
+      "count": 112
+    },
+    {
+      "id": "casero-report",
+      "name": "Cuba — Casero guest report (placeholder)",
+      "description": "Placeholder for the casero.rem.cu reporting code. Not finalized yet.",
+      "path": "codes/casero-report.json",
+      "count": 1
     }
   ]
 }
