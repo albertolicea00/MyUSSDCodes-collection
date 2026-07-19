@@ -29,7 +29,10 @@ Besides importing collections from this repository, users can **create their own
 .
 ├── codes/                  # The catalog itself
 │   ├── index.json          # Manifest listing every collection
-│   └── gsm-standard.json   # GSM standard (carrier-independent) codes
+│   ├── gsm-standard.json   # GSM standard (carrier-independent) codes
+│   ├── cuba-cubacel.json   # ETECSA/Cubacel codes — source of truth for CubaCell Connect
+│   ├── cuba-banks.json     # BPA/BANDEC/BM banking codes — source of truth for Banca Remota
+│   └── casero-report.json  # casero.rem.cu guest-report code (placeholder, not finalized)
 ├── schema/                 # JSON Schemas for collections and codes
 │   ├── collection.schema.json
 │   └── ussd-code.schema.json
@@ -101,6 +104,29 @@ https://raw.githubusercontent.com/albertolicea00/MyUSSDCodes-collection/main/cod
 ```
 
 Paste a collection URL in **Settings → Import** inside the app.
+
+## 🔄 Source of truth for the other apps
+
+Several of my apps ship their own USSD codes for different domains. Keeping the
+same code correct in each repo by hand does not scale — change one and the rest
+silently drift. **This catalog is the single source of truth.** Each consuming
+repo runs a **weekly GitHub Action** that compares its shipped dial strings
+against the canonical collection here and, on any drift, fails the run and opens
+a tracking issue.
+
+| Collection | Consumer repo | What it feeds |
+| ---------- | ------------- | ------------- |
+| [`codes/cuba-cubacel.json`](codes/cuba-cubacel.json) | [cubacell-connect](https://github.com/albertolicea00/cubacell-connect) | ETECSA/Cubacel service codes |
+| [`codes/cuba-banks.json`](codes/cuba-banks.json) | [BancaRemota_app](https://github.com/albertolicea00/BancaRemota_app) | BPA / BANDEC / BM banking codes |
+| [`codes/casero-report.json`](codes/casero-report.json) | [casero.cu-apk](https://github.com/albertolicea00/casero.cu-apk) · [casero.cu-ios](https://github.com/albertolicea00/casero.cu-ios) | guest-report code — **placeholder, not finalized** |
+| [`codes/gsm-standard.json`](codes/gsm-standard.json) | [MyUSSDCodes-apk](https://github.com/albertolicea00/MyUSSDCodes-apk) · [MyUSSDCodes-ios](https://github.com/albertolicea00/MyUSSDCodes-ios) | bundled seed catalog |
+
+**Workflow:** edit the code here first, bump the collection `version` and
+`index.json`, then update the consuming app to match. The consumers compare only
+the **set of dial strings**, so cosmetic fields (names, categories) can differ
+per app. The `casero-report` collection is a placeholder: its check is expected
+to stay red until the real casero.rem.cu reporting code is published here (the
+`placeholder` tag removed).
 
 ## 🤝 Contributing
 
