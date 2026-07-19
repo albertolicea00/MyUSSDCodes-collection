@@ -1,0 +1,31 @@
+{
+  "$schema": "../schema/collection.schema.json",
+  "id": "casero-report",
+  "name": "Cuba — Casero guest report (placeholder)",
+  "description": "PLACEHOLDER. The official casero.rem.cu USSD/SMS guest-report format is not published yet. Replace this collection with the real code and remove the \"placeholder\" tag; the casero apps' weekly sync check stays red until then.",
+  "version": 1,
+  "country": "CU",
+  "language": "en",
+  "codes": [
+    {
+      "id": "casero-report-ussd",
+      "name": "Guest report (USSD, placeholder)",
+      "description": "Placeholder for the official casero.rem.cu USSD guest-report dial string. Do not ship — replace with the real code once specified.",
+      "code": "*0*{passport}#",
+      "category": "Guest report",
+      "tags": [
+        "placeholder",
+        "casero"
+      ],
+      "variables": [
+        {
+          "key": "passport",
+          "label": "Passport number",
+          "type": "text"
+        }
+      ],
+      "dangerous": false,
+      "notes": "PLACEHOLDER — not the real reporting code. Sync check fails while the \"placeholder\" tag is present."
+    }
+  ]
+}
