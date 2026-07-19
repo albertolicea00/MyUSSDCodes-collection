@@ -1,0 +1,260 @@
+{
+  "$schema": "../schema/collection.schema.json",
+  "id": "cuba-cubacel",
+  "name": "Cuba — Cubacel (ETECSA)",
+  "description": "ETECSA / Cubacel USSD service codes: balance, plans, purchases, transfers and utilities. Source of truth for the CubaCell Connect app.",
+  "version": 1,
+  "country": "CU",
+  "carrier": "ETECSA (Cubacel)",
+  "language": "en",
+  "codes": [
+    {
+      "id": "cubacel-main-balance",
+      "name": "Main Balance",
+      "description": "Main balance, voice, SMS and mobile data resources, plus the phone line validity period.",
+      "code": "*222#",
+      "category": "Balance & Plans",
+      "tags": [
+        "ussd",
+        "balance"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)"
+    },
+    {
+      "id": "cubacel-data-plan",
+      "name": "Data Plan",
+      "description": "Remaining balance and validity of the purchased mobile data plan. Does not include bonus data.",
+      "code": "*222*328#",
+      "category": "Balance & Plans",
+      "tags": [
+        "ussd",
+        "balance"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)",
+      "notes": "328 = DAT (datos)"
+    },
+    {
+      "id": "cubacel-bonus-usd-plans",
+      "name": "Bonuses & USD Plans",
+      "description": "Everything related to promotional top-up bonuses: minutes (MIN), messages (SMS), credit ($) and data (GB/MB/KB). Also shows extra 4G data (Datos.LTE), national browsing data (Datos.cu) and plans in USD.",
+      "code": "*222*266#",
+      "category": "Balance & Plans",
+      "tags": [
+        "ussd",
+        "balance"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)",
+      "notes": "266 = BON (bono)"
+    },
+    {
+      "id": "cubacel-voice-plan",
+      "name": "Voice Plan",
+      "description": "Remaining credit and validity of the purchased voice plan.",
+      "code": "*222*869#",
+      "category": "Balance & Plans",
+      "tags": [
+        "ussd",
+        "balance"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)",
+      "notes": "869 = VOZ (voz)"
+    },
+    {
+      "id": "cubacel-sms-plan",
+      "name": "SMS Plan",
+      "description": "Remaining credit and validity of the purchased SMS plan.",
+      "code": "*222*767#",
+      "category": "Balance & Plans",
+      "tags": [
+        "ussd",
+        "balance"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)",
+      "notes": "767 = SMS"
+    },
+    {
+      "id": "cubacel-friends-plan",
+      "name": "Friends Plan Status",
+      "description": "Status of the Plan Amigos (Friends Plan), if you have requested it.",
+      "code": "*222*264#",
+      "category": "Balance & Plans",
+      "tags": [
+        "ussd",
+        "balance"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)",
+      "notes": "264 = AMG (amigos)"
+    },
+    {
+      "id": "cubacel-postpaid-balance",
+      "name": "Postpaid Balance",
+      "description": "All-in-one balance query for postpaid and institutional accounts: calls, SMS and internet.",
+      "code": "*111#",
+      "category": "Balance & Plans",
+      "tags": [
+        "ussd",
+        "balance"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)"
+    },
+    {
+      "id": "cubacel-data-availability",
+      "name": "Mobile Data Availability",
+      "description": "Check whether your line can connect through mobile data in Cuba.",
+      "code": "*222*468#",
+      "category": "Balance & Plans",
+      "tags": [
+        "ussd",
+        "balance"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)",
+      "notes": "468 = INT (internet)"
+    },
+    {
+      "id": "cubacel-purchase-menu",
+      "name": "Purchase Menu",
+      "description": "Interactive menu to buy services: 1) Data, 2) SMS, 3) Voice, 4) Friends Plan, 5) Bundles (Data + Voice + SMS).",
+      "code": "*133#",
+      "category": "Purchases & Top-Up",
+      "tags": [
+        "ussd",
+        "purchase"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)"
+    },
+    {
+      "id": "cubacel-recharge-card",
+      "name": "Recharge with Card",
+      "description": "Manually recharge your balance with a scratch card bought from a Telecommunications Agent or an ETECSA office. Enter the card number.",
+      "code": "*662*{input}#",
+      "category": "Purchases & Top-Up",
+      "tags": [
+        "ussd",
+        "purchase"
+      ],
+      "variables": [
+        {
+          "key": "input",
+          "label": "Card number",
+          "type": "number"
+        }
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)"
+    },
+    {
+      "id": "cubacel-recharge-call",
+      "name": "Recharge by Call",
+      "description": "Call this number and follow the voice instructions to recharge your balance.",
+      "code": "*666",
+      "category": "Purchases & Top-Up",
+      "tags": [
+        "call",
+        "purchase"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)"
+    },
+    {
+      "id": "cubacel-transfer-menu",
+      "name": "Transfer Menu",
+      "description": "Interactive menu with three options: 1) Balance transfer, 2) Change the transfer PIN, 3) Adelanta Saldo (advance credit) service.",
+      "code": "*234#",
+      "category": "Transfers",
+      "tags": [
+        "ussd",
+        "transfer"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)"
+    },
+    {
+      "id": "cubacel-customer-service",
+      "name": "Customer Service",
+      "description": "Call this number for support, questions, or to activate voicemail on your phone.",
+      "code": "*2266",
+      "category": "Other Utilities",
+      "tags": [
+        "call",
+        "utilities"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)"
+    },
+    {
+      "id": "cubacel-collect-call",
+      "name": "Collect Call",
+      "description": "The person receiving the call pays. Useful when you need to call and have no balance.",
+      "code": "*99{input}",
+      "category": "Other Utilities",
+      "tags": [
+        "call",
+        "utilities"
+      ],
+      "variables": [
+        {
+          "key": "input",
+          "label": "Phone number",
+          "type": "phone"
+        }
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)"
+    },
+    {
+      "id": "cubacel-private-call",
+      "name": "Private Call",
+      "description": "Hide your caller ID by prefixing the number you want to call. The other person will not see who is calling.",
+      "code": "#31#{input}",
+      "category": "Other Utilities",
+      "tags": [
+        "call",
+        "utilities"
+      ],
+      "variables": [
+        {
+          "key": "input",
+          "label": "Phone number",
+          "type": "phone"
+        }
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)"
+    },
+    {
+      "id": "cubacel-imei",
+      "name": "Show IMEI",
+      "description": "Display the IMEI code of your phone.",
+      "code": "*#06#",
+      "category": "Other Utilities",
+      "tags": [
+        "ussd",
+        "utilities"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)"
+    },
+    {
+      "id": "cubacel-voicemail",
+      "name": "Voicemail",
+      "description": "Call this number to access your voicemail inbox.",
+      "code": "*123",
+      "category": "Other Utilities",
+      "tags": [
+        "call",
+        "utilities"
+      ],
+      "dangerous": false,
+      "source": "ETECSA (Cubacel)"
+    }
+  ]
+}
